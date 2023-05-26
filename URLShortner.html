@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <style>
+        /* Basic CSS styles for the URL shortener */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .shorten-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="url"] {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .shortened-url {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <div class="shorten-form">
+        <label for="original-url">Original URL:</label>
+        <input type="url" id="original-url" placeholder="Enter the URL to shorten">
+        
+        <button onclick="shortenURL()">Shorten</button>
+        
+        <div class="shortened-url" id="shortened-url"></div>
+    </div>
+    
+    <script>
+        function shortenURL() {
+            var originalUrl = document.getElementById("original-url").value;
+            
+            // Here, you would typically make an AJAX request to the server to perform the URL shortening.
+            // The server would generate a shortened URL and return it as a response, which can be displayed on the page.
+            // For simplicity, we'll just display a dummy shortened URL here.
+            var shortenedUrl = "https://example.com/abc123";
+            
+            document.getElementById("shortened-url").innerHTML = "Shortened URL: <a href='" + shortenedUrl + "'>" + shortenedUrl + "</a>";
+        }
+    </script>
+</body>
+</html>
